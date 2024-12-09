@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Welcome to Arvis</title>
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav>
+      <h1>
+        <a href="index.html">
+          <img src="ARVIS.png" alt="ARVIS Logo" style="height: 45px" />
+          <img src="ARVISText.png" alt="ARVIS Logo" style="height: 45px" />
+        </a>
+      </h1>
+    </nav>
+
+
+    <h2 class="introducing">
+      <p>The Best Mods, Resource Packs and Seeds  for Minecraft!</p>
+      <p>Your Adventure Starts Here</p>
+    </h2>
+
+    <!-- Welcome Box -->
+    <div class="welcome-container">
+      <div class="welcome">
+        <p class="upper">Welcome to <a class="Arvis">ARVIS</a></p>
+        <p>Let's begin the adventure</p>
+        <form id="welcomeForm">
+          <div class="input-container">
+            <input type="text" id="username" placeholder="What's your name?" />
+            <button type="submit">Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- JavaScript for Redirect -->
+    <script>
+      document
+        .getElementById("welcomeForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Get the username from the input
+          const username = document.getElementById("username").value;
+
+          // Check if a name is entered
+          if (username) {
+            // Redirect to the main page (e.g., main.html)
+            window.location.href = "indexMain.html";
+          } else {
+            alert("Please enter your name to continue.");
+          }
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>&copy; 2024 ARVIS. All rights reserved.</footer>
+
+  </body>
+</html>
